@@ -52,7 +52,7 @@ abstract class Executor {
 
         // Determine Java version: When running under maven4 and a toolchain
         // selects a jdk < 17, then we need to exclude "maven-logging-x.jar" from the
-        // classpath. Otherwise slf4j's Logging Factory will try to initiale Maven4's
+        // classpath. Otherwise slf4j's Logging Factory will try to initialize Maven4's
         // service provider (org.apache.maven.slf4j.MavenServiceProvider) which will
         // lead to a UnsupportedClassVersionError.
         int majorJavaVersion = determineJavaVersion(javaExecutable);
